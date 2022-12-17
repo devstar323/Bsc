@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> Scraped Tweets </title>			
+	</head>
+	<body>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+        <div class="container">
+		<div class="table-responsive">
+			<table>
+				<h1 class="allign">
+				Scraped tweets
+					{% for table in tables %}
+					<h2>{{titles[loop.index]}}</h2>							
+					{{ table|safe }}
+					{% endfor %}	
+				</h1>
+			</table>
+        </div>
+    </div>
+	</body>
+</html>
+
