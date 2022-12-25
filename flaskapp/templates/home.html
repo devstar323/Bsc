@@ -3,26 +3,43 @@
 {% block content %}
   <div class="card-wrapper">
 
-    <div class="card">
+    <div class="card" style="height: 750px;">
 
-      <h1 class="center">Create an Account</h1>
-
-      <form name="signup_form">
-        
-        <label for="name">Name</label>
-        <input type="text" name="name" class="field" required>
-
-        <label for="email">Email</label>
-        <input type="email" name="email" class="field" required>
-
-        <label for="password">Password</label>
-        <input type="password" name="password" class="field" required>
-
-        <p class="error error--hidden"></p>
-
-        <input type="submit" value="Sign Up" class="btn">
+      <h1 class="left" style="font-family: 'Aquire', sans-serif;">sing up</h1>
       
-      </form>
+      <div class="center">
+      
+        <img src="/static/image/logo.png" width="80" height="120" alt="logo">
+
+      </div>
+
+      <div style="margin: 0 10%;">
+
+        <form name="signup_form" class="center">
+          
+          <input type="text" name="firstName" class="field" placeholder="First name" required>
+          
+          <input type="text" name="lastName" class="field" placeholder="Last name" required>
+          
+          <input type="text" name="email" class="field" placeholder="Username" required>
+  
+          <input type="password" name="password" class="field" placeholder="Password" required>
+          
+          <input type="password" name="repeatPassword" class="field" placeholder="Repeat Password" required>
+          
+          <p class="error error--hidden"></p>
+  
+          <input type="submit" value="Sign Up" class="btn" style="background-color: black;">
+  
+          <div class="center">
+  
+            <label for="login">Already a member? <a href="/login" style="color:blue">Sign In </a></label>
+  
+          </div>
+  
+        </form>
+
+      </div>
       
     </div>
   

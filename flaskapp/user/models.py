@@ -21,7 +21,8 @@ class User:
     # Create the user object
     user = {
       "_id": uuid.uuid4().hex,
-      "name": request.form.get('name'),
+      "firstName": request.form.get('firstName'),
+      "lastName": request.form.get('lastName'),
       "email": request.form.get('email'),
       "password": request.form.get('password')
     }

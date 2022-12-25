@@ -2,40 +2,29 @@
 
 {% block content %}
   <div class="card-wrapper">
-
-    <div class="card">
-
-      <h1 class="center">Dashboard</h1>
-      <p class="center">You are currently logged in.</p>
-
-      <div class="center">
-        <a href="/user/signout" class="btn btn--secondary">Sign Out</a>
+    <div class="card" style="height: 750px;">
+      <div>
+        <div style="float: left;">
+          <h1 style="font-family: 'Aquire', sans-serif;">Beetle</h1>
+        </div>
+        <div style="float: right; margin-top: 0.5em;">
+          <a href="/profile"><img src="../static/image/profile.png" height="55px", width="50px" alt="profile"></a>
+        </div>
       </div>
-    
-    </div>
-
-    <div class="card">
-
-      <h2 class="center">Your Info</h2>
-
-      <p>
-        <strong>ID:</strong> {{ session['user']['_id'] }}<br>
-        <strong>Name:</strong> {{ session['user']['name'] }}<br>
-        <strong>Email:</strong> {{ session['user']['email'] }}
-      </p>
-    
-    </div>
+      <div style="margin: 10em 1em; display: flex; justify-content: space-between;">
+        <div style="text-align:center">
+          <a href="/annotate"><img src="../static/image/annotate.png" width="80px" height="auto" alt="annotate"></a>
+          <p style="margin-top: 0;">Annotate</p>
+        </div>
+        <div style="text-align:center">
+          <a href="/scrapped"><img src="../static/image/collect.png" width="85px" height="auto" alt="collect"></a>
+          <p style="margin-top: 0;">Collect data</p>
+        </div>  
+        <div style="text-align:center">
+          <a href="/search"><img src="../static/image/search.png" width="82px" height="auto" alt="search"></a>
+          <p style="margin-top: 0;">Search</p>
+        </div>  
       </div>
-
-
-
-      <div class="center">
-      <button class="btn btn-03"><a href="/collect" class="round-button">Annotate data</a></button>
-    <button class="btn btn-03"><a href="/collect" class="round-button">Collect data</a></button>
-  </div>
-   
-   
     </div>
-  
   </div>
 {% endblock %}

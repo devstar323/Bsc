@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="card-wrapper">
+
+    <div class="card">
+
+      <h1 class="left">Profile</h1>
+      
+      <h3 class="left">Account details</h3>
+      
+      <img class="left" src="logo" width="50px" height="50px" alt="logo">
+      
+      <form name="detail_form">
+
+        <label for="firstName">First name</label>
+        <input type="text" name="firstName" class="field" placeholder="{{ session['user']['firstName'] }}">
+        
+        <label for="lastName">Last name</label>
+        <input type="text" name="lastName" class="field" placeholder="{{ session['user']['lastName'] }}">
+        
+        <label for="userName">Username</label>
+        <input type="text" name="userName" class="field" placeholder="{{ session['user']['email'] }}">
+        
+        <label for="password">Password</label>
+        <input type="password" name="password" class="field" placeholder="{{ session['user']['password'] }}">
+        
+        <label for="password">Repeat Password</label>
+        <input type="password" name="repeatPassword" class="field">
+
+        <input type="submit" value="Update" class="btn">
+        
+      </form>
+      
+    </div>
+  
+  </div>
+{% endblock %}

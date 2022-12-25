@@ -20,6 +20,27 @@ $("form[name=signup_form").submit(function(e) {
   e.preventDefault();
 });
 
+$("form[name=detail_form").submit(function(e) {
+
+  var $form = $(this);
+  var $error = $form.find(".error");
+  var data = $form.serialize();
+
+  $.ajax({
+    url: "/user/profile",
+    type: "POST",
+    data: data,
+    dataType: "json",
+    success: function(resp) {
+    },
+    error: function(resp) {
+      $error.text(resp.responseJSON.error).removeClass("error--hidden");
+    }
+  });
+
+  e.preventDefault();
+});
+
 $("form[name=login_form").submit(function(e) {
 
   var $form = $(this);
@@ -41,6 +62,7 @@ $("form[name=login_form").submit(function(e) {
 
   e.preventDefault();
 });
+
 $("form[name=scrape").submit(function(e) {
 
   var $form = $(this);
